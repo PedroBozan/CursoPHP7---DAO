@@ -22,9 +22,17 @@ echo json_encode($usuarios);
 //echo json_encode($search);
 
 //Carrega um usuário usando o login e senha
+//$usuario = new Usuario();
+//$usuario->login("user", 12345);
+//echo $usuario;
+
+//Cria um novo usuario
+//$aluno = new Usuario("Pedro", "654321");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("user", 12345);
-
+$usuario->loadById(1);
+$usuario->update("Professor", "987546");
 echo $usuario;
-
 ?>
